@@ -29,10 +29,12 @@ public class Input {
               Card card = new Card(numbers);
               game.addCard(card);
           }
+          game.initializeSize();
           WinningCard winningCard = game.play();
-          while (!random.gameEnd() && winningCard == null) {
+          while (!game.isGameEnd()) {
               winningCard = game.play();
           }
+          winningCard = game.getWinCard();
           System.out.println("sum is " + winningCard.getFinalScore());
 
       }

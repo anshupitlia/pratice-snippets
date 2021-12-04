@@ -14,6 +14,8 @@ public class WinningCard {
     }
 
     public int getFinalScore() {
+        System.out.println("get sum" + getSum());
+        System.out.println("winningNumber" + winningNumber);
         return getSum() * winningNumber;
     }
 }

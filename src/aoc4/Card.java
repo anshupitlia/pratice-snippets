@@ -3,10 +3,19 @@ package aoc4;
 public class Card {
     private int[][] numbers;
     private String[][] strNumbers;
+    private boolean removed;
 
     public Card(String[][] strNumbers) {
         this.strNumbers = strNumbers;
         convertStringToNumbers();
+    }
+
+    public void remove() {
+        this.removed = true;
+    }
+
+    public boolean isRemoved() {
+        return this.removed;
     }
 
     private void convertStringToNumbers() {
